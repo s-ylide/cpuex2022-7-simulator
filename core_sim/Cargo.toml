@@ -1,0 +1,30 @@
+[package]
+name = "core_sim"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["typed_memory", "stat", "fpu_sim", "time_predict"]
+typed_memory = []
+stat = []
+fpu_sim = []
+isa_2nd = []
+time_predict = []
+
+[build-dependencies]
+bindgen.workspace = true
+cc.workspace = true
+glob.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+thiserror.workspace = true
+nom.workspace = true
+once_cell.workspace = true
+log.workspace = true
+env_logger.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+bitmask-enum.workspace = true
+num_enum.workspace = true
+cfg-if.workspace = true
